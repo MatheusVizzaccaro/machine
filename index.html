@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>machine</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>Machine Convert</h1>
+        <select id="selectedScreen" onchange="showScreen()">
+            <option value="decimal" selected>Decimal</option>
+            <option value="binary">Binário</option>
+            <option value="octal">Octal</option>
+            <option value="hexadecimal">Hexadecimal</option>
+        </select>
+    </div>
+    <div id="decimal" class="screen">
+        <h2>Decimal</h2>
+    </div>
+    <div id="binary" class="screen">
+        <h2>Binário</h2>
+    </div>
+    <div id="octal" class="screen">
+        <h2>Octal</h2>
+    </div>
+    <div id="hexadecimal" class="screen">
+        <h2>Hexadecimal</h2>       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
