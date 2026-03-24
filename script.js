@@ -23,16 +23,16 @@ function showScreen() {
 showScreen();
 
 function converterDecimal() {
-    if (ipt_numeroD.value >= 0) {
+    if (ipt_numeroD.value == "") {
+        decVerifyError.innerHTML = "Insira algum valor antes de converter.";
+        limparDadosDec();
+    } else if (ipt_numeroD.value >= 0) {
         decVerifyError.innerHTML = "";
         let input = parseInt(ipt_numeroD.value, 10);
 
         document.getElementById("decResultadoBinario").innerHTML = `Decimal (${ipt_numeroD.value})<sub>10</sub> -> Binário (${input.toString(2)})<sub>2</sub>`;
         document.getElementById("decResultadoOctal").innerHTML = `Decimal (${ipt_numeroD.value})<sub>10</sub> -> Octal (${input.toString(8)})<sub>8</sub>`;
         document.getElementById("decResultadoHexadecimal").innerHTML = `Decimal (${ipt_numeroD.value})<sub>10</sub> -> Hexadecimal (${input.toString(16).toUpperCase()})<sub>16</sub>`;
-    } else if (ipt_numeroD.value == "") {
-        decVerifyError.innerHTML = "Insira algum valor antes de converter.";
-        limparDadosDec();
     } else {
         decVerifyError.innerHTML = `${ipt_numeroD.value} não é um numero válido.`;
         limparDadosDec();
