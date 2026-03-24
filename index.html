@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Machine Convert</h1>
+        <h1 class="initialText">Machine Converter</h1>
         <select id="selectedScreen" onchange="showScreen()">
             <option value="decimal" selected>Decimal</option>
             <option value="binary">Binário</option>
@@ -17,17 +17,54 @@
             <option value="hexadecimal">Hexadecimal</option>
         </select>
     </div>
+    <br>
     <div id="decimal" class="screen">
         <h2>Decimal</h2>
+        <input type="number" id="ipt_numeroD">
+        <br>
+        <button onclick="converterDecimal()">Converter</button>
+        <div class="resultado">
+            <span id="decVerifyError"></span>
+            <p id="decResultadoBinario"></p>
+            <p id="decResultadoOctal"></p>
+            <p id="decResultadoHexadecimal"></p>
+        </div>
     </div>
     <div id="binary" class="screen">
         <h2>Binário</h2>
+        <input type="number" id="ipt_numeroB">
+        <br>
+        <button onclick="converterBinario()">Converter</button>
+        <div class="resultado">
+            <span id="binVerifyError"></span>
+            <p id="binResultadoDecimal"></p>
+            <p id="binResultadoOctal"></p>
+            <p id="binResultadoHexadecimal"></p>
+        </div>
     </div>
     <div id="octal" class="screen">
         <h2>Octal</h2>
+        <input type="number" id="ipt_numeroO">
+        <br>
+        <button onclick="converterOctal()">Converter</button>
+        <div class="resultado">
+            <span id="octalVerifyError"></span>
+            <p id="octalResultadoDecimal"></p>
+            <p id="octalResultadoBinario"></p>
+            <p id="octalResultadoHexadecimal"></p>
+        </div>
     </div>
     <div id="hexadecimal" class="screen">
-        <h2>Hexadecimal</h2>       
+        <h2>Hexadecimal</h2>
+        <input type="text" id="ipt_numeroH">
+        <br>
+        <button onclick="converterHexadecimal()">Converter</button>
+        <div class="resultado">
+            <span id="hexVerifyError"></span>
+            <p id="hexResultadoDecimal"></p>
+            <p id="hexResultadoBinario"></p>
+            <p id="hexResultadoOctal"></p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
